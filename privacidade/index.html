@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidade — Ciclo</title>
+<meta name="description" content="O que o Ciclo faz com os seus dados, e o que ele nunca faz.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4a12 12 0 1 1-8.49 3.51' fill='none' stroke='%230F4F49' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap">
+<style>
+:root {
+  color-scheme: light dark;
+    --brandPrimary: #0F4F49;
+    --brandSubtle: #D6E6E2;
+    --surfaceCanvas: #EFF3F1;
+    --surfaceDefault: #FFFFFF;
+    --surfaceSunken: #E4EAE8;
+    --textPrimary: #0D1A17;
+    --textSecondary: #31403C;
+    --textTertiary: #6B7C77;
+    --borderSubtle: #D2DBD8;
+    --alertAttention: #8E6B0F;
+    --alertAttentionSubtle: #F7EFD8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brandPrimary: #63C0B4;
+    --brandSubtle: #23312E;
+    --surfaceCanvas: #0A1211;
+    --surfaceDefault: #111B19;
+    --surfaceSunken: #0E1817;
+    --textPrimary: #E9F0EE;
+    --textSecondary: #BDCAC6;
+    --textTertiary: #7F908B;
+    --borderSubtle: #23312E;
+    --alertAttention: #D4A93F;
+    --alertAttentionSubtle: #2C2411;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding-block: 3rem 5rem;
+  padding-inline: 1.25rem;
+  background: var(--surfaceCanvas);
+  color: var(--textPrimary);
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  color: var(--textTertiary);
+  font-size: 0.875rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.back:hover { color: var(--brandPrimary); }
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  text-wrap: balance;
+  margin: 2.75rem 0 0.75rem;
+}
+h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 0; }
+h2 { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+h4 { font-size: 0.95rem; font-weight: 600; color: var(--textSecondary); }
+
+p, ul { margin: 0 0 1.1rem; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.45rem; }
+
+.lead { font-size: 1.125rem; color: var(--textSecondary); }
+.fine { font-size: 0.85rem; color: var(--textTertiary); }
+
+strong { font-weight: 600; }
+
+/* Caminho de navegacao, que e o uso normal do italico nestes documentos. */
+em {
+  font-style: normal;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  color: var(--textSecondary);
+}
+
+/* Campo ainda por preencher: a revisao das lojas abre estas paginas, e um campo
+   obrigatorio em branco precisa saltar antes disso. */
+em.todo {
+  font-family: inherit;
+  background: var(--alertAttentionSubtle);
+  color: var(--alertAttention);
+  padding: 0.1em 0.4em;
+  border-radius: 0.25rem;
+}
+
+code {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--surfaceSunken);
+  padding: 0.12em 0.35em;
+  border-radius: 0.25rem;
+}
+
+a { color: var(--brandPrimary); }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--borderSubtle);
+  margin: 2.75rem 0;
+}
+
+.scroll { overflow-x: auto; margin-bottom: 1.5rem; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 34rem;
+  font-size: 0.9rem;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--borderSubtle);
+}
+th {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--textTertiary);
+}
+tbody tr:last-child td { border-bottom: 0; }
+
+.cards { list-style: none; padding: 0; }
+.cards li {
+  background: var(--surfaceDefault);
+  border: 1px solid var(--borderSubtle);
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.cards a { font-weight: 600; text-decoration: none; }
+.cards a:hover { text-decoration: underline; }
+.cards span {
+  display: block;
+  color: var(--textTertiary);
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+}
+
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="../">&larr; Ciclo</a>
+<h1>Política de privacidade — Ciclo</h1>
+<p><strong>Última atualização:</strong> 17 de setembro de 2026</p>
+<p><strong>Versão do texto de consentimento:</strong> 1</p>
+<p>Este documento descreve o que o Ciclo faz com os seus dados. Ele é escrito para ser lido, e não para cumprir tabela: onde houver dúvida entre precisão e clareza, a frase foi escrita duas vezes até caber nas duas.</p>
+<p><strong>Controlador:</strong> <em class="todo">(a preencher: razão social, CNPJ e endereço)</em></p>
+<p><strong>Encarregado (DPO):</strong> <em class="todo">(a preencher: nome e e-mail de contato)</em></p>
+<hr>
+<h2>1. O princípio</h2>
+<p>Os seus registros de saúde <strong>nascem e vivem no seu celular</strong>. O Ciclo funciona inteiro sem conta, sem internet e sem nos enviar nada.</p>
+<p>Se você ligar o backup, os registros são <strong>cifrados no seu aparelho</strong> antes de sair. O servidor guarda bytes que não consegue ler — nós não temos a chave, e não há como pedi-la a nós. Em troca: perdendo o celular e o código de recuperação, os dados não voltam. Nem para você, nem para nós.</p>
+<h2>2. Quais dados o app trata</h2>
+<h3>Dados de saúde (dado pessoal sensível, art. 5º, II da LGPD)</h3>
+<p>Aplicações (data, hora, dose, sítio, apresentação, lote e observação), sintomas (tipo, intensidade, momento e observação), peso e cintura, proteína e água, e o tratamento cadastrado (medicamento, molécula, esquema e dose atual).</p>
+<ul>
+<li><strong>Onde ficam:</strong> no banco local do seu aparelho.</li>
+<li><strong>Base legal:</strong> consentimento específico e destacado (art. 11, I), pedido no primeiro uso, separado do aceite dos termos.</li>
+<li><strong>Saem do aparelho?</strong> Só se você ligar o backup — e, nesse caso, <strong>cifrados</strong>.</li>
+</ul>
+<h3>Identificação, apenas se você criar conta</h3>
+<p>Seu e-mail, para enviar o link de acesso e permitir recuperar a conta.</p>
+<ul>
+<li>Guardado em tabela separada do registro clínico.</li>
+<li>A busca é feita por <strong>hash com segredo do servidor</strong>, para que um vazamento do banco não permita testar endereços conhecidos e descobrir quem tem conta.</li>
+<li><strong>Base legal:</strong> execução do serviço que você pediu (art. 7º, V).</li>
+</ul>
+<h3>Uso do aplicativo, apenas com o seu consentimento</h3>
+<p>Quais telas foram abertas e quais ações aconteceram — nomes de evento de uma lista fechada, <strong>sem nenhum parâmetro</strong>.</p>
+<p>Não é possível, por construção, enviar qual sintoma você registrou, qual dose você usa ou quanto você pesa: a interface de telemetria do app não tem onde esse dado caberia.</p>
+<ul>
+<li><strong>Base legal:</strong> consentimento, revogável a qualquer momento em <em>Você → Privacidade</em>. Desligar <strong>para a coleta</strong>, não só o envio.</li>
+<li><strong>Padrão:</strong> desligado.</li>
+</ul>
+<h3>Relatório de falha, apenas com o seu consentimento</h3>
+<p>Informação técnica sobre travamentos: modelo do aparelho, versão do sistema e pilha de execução. Sem conteúdo de registro.</p>
+<ul>
+<li><strong>Base legal:</strong> consentimento. <strong>Padrão:</strong> desligado.</li>
+</ul>
+<h3>Registro de acesso no servidor</h3>
+<p>Quando há conta, o servidor guarda uma trilha de auditoria: conta, aparelho, ação, quantidade de registros, data e <strong>prefixo</strong> do endereço IP (três octetos em IPv4; /48 em IPv6).</p>
+<p>Nunca o conteúdo. Uma trilha que copia o dado sensível duplica o problema que ela existe para vigiar. O prefixo basta para investigar acesso indevido e fica longe do necessário para localizar alguém.</p>
+<h2>3. O que o Ciclo <strong>não</strong> faz</h2>
+<ul>
+<li>Não vende, aluga nem compartilha os seus dados com terceiros para publicidade.</li>
+<li>Não tem anúncios.</li>
+<li>Não envia dado de saúde para serviços de análise ou de relatório de falha.</li>
+<li>Não usa os seus registros para treinar modelo de nenhuma espécie.</li>
+<li>Não compartilha nada com fabricante de medicamento, plano de saúde ou empregador.</li>
+</ul>
+<h2>4. Quem processa dados conosco</h2>
+<div class="scroll"><table><thead><tr>
+<th>Operador</th>
+<th>Para quê</th>
+<th>O que recebe</th>
+</tr></thead><tbody>
+<tr>
+<td>Provedor de nuvem do backup</td>
+<td>Guardar os registros cifrados</td>
+<td>Bytes cifrados, conta, coleção, id, versão e lápide</td>
+</tr>
+<tr>
+<td>Google (Firebase Analytics e Crashlytics)</td>
+<td>Uso do app e relatório de falha — <strong>só com consentimento</strong></td>
+<td>Nomes de evento de lista fechada, sem parâmetros; dados técnicos de falha</td>
+</tr>
+<tr>
+<td>Apple App Store / Google Play, via RevenueCat</td>
+<td>Processar a assinatura</td>
+<td>Identificador de compra. <strong>Nós não recebemos dado de cartão</strong></td>
+</tr>
+<tr>
+<td>Provedor de e-mail transacional</td>
+<td>Enviar o link de acesso</td>
+<td>Seu e-mail</td>
+</tr>
+</tbody></table></div>
+
+<p>Nenhum deles recebe conteúdo de registro clínico em texto legível.</p>
+<h2>5. Os seus direitos</h2>
+<p>Todos exercíveis <strong>dentro do app</strong>, sem pedir a ninguém:</p>
+<div class="scroll"><table><thead><tr>
+<th>Direito</th>
+<th>Onde</th>
+</tr></thead><tbody>
+<tr>
+<td>Acesso e portabilidade</td>
+<td><em>Você → Seus dados → Exportar</em> (arquivo com tudo)</td>
+</tr>
+<tr>
+<td>Eliminação</td>
+<td><em>Você → Seus dados → Excluir tudo</em> (apaga o aparelho <strong>e</strong> a conta no servidor, sem lápide)</td>
+</tr>
+<tr>
+<td>Revogar consentimento</td>
+<td><em>Você → Privacidade</em>, e nos ajustes do sistema para notificações</td>
+</tr>
+<tr>
+<td>Correção</td>
+<td>Qualquer registro é editável ou apagável na própria tela</td>
+</tr>
+</tbody></table></div>
+
+<p>Para pedidos que precisem de nós, escreva ao encarregado. Respondemos em até 15 dias, como manda o art. 19 da LGPD.</p>
+<h2>6. Por quanto tempo guardamos</h2>
+<ul>
+<li><strong>No seu aparelho:</strong> enquanto você quiser.</li>
+<li><strong>No servidor:</strong> enquanto a conta existir. Excluindo a conta, os registros são apagados de verdade — <code>DELETE</code>, e não marcação de excluído.</li>
+<li><strong>Trilha de auditoria:</strong> 6 meses, para investigar acesso indevido.</li>
+<li><strong>Consentimentos:</strong> mantidos após a exclusão do tratamento, como prova de que houve autorização.</li>
+</ul>
+<h2>7. Crianças e adolescentes</h2>
+<p>O Ciclo não se destina a menores de 18 anos.</p>
+<h2>8. Transferência internacional</h2>
+<p>Servidores podem estar fora do Brasil. Como o conteúdo clínico viaja e é armazenado <strong>cifrado</strong>, com a chave só no seu aparelho, o operador estrangeiro não tem acesso ao conteúdo.</p>
+<h2>9. O que o Ciclo não é</h2>
+<p>O Ciclo <strong>registra e organiza</strong>. Ele não indica, não calcula e não sugere dose, não interpreta sintoma como diagnóstico e não substitui acompanhamento profissional. Não é dispositivo médico nos termos da RDC 657/2022 da ANVISA.</p>
+<h2>10. Mudanças</h2>
+<p>Mudando o tratamento dos seus dados, avisamos no app e — quando a base legal for consentimento — pedimos de novo. Consentimento é versionado: mudou o texto, o anterior deixa de valer.</p>
+
+</main>
+</body>
+</html>

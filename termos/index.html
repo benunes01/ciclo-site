@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termos de uso — Ciclo</title>
+<meta name="description" content="O que o Ciclo é, o que ele não é, e como a assinatura funciona.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4a12 12 0 1 1-8.49 3.51' fill='none' stroke='%230F4F49' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap">
+<style>
+:root {
+  color-scheme: light dark;
+    --brandPrimary: #0F4F49;
+    --brandSubtle: #D6E6E2;
+    --surfaceCanvas: #EFF3F1;
+    --surfaceDefault: #FFFFFF;
+    --surfaceSunken: #E4EAE8;
+    --textPrimary: #0D1A17;
+    --textSecondary: #31403C;
+    --textTertiary: #6B7C77;
+    --borderSubtle: #D2DBD8;
+    --alertAttention: #8E6B0F;
+    --alertAttentionSubtle: #F7EFD8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brandPrimary: #63C0B4;
+    --brandSubtle: #23312E;
+    --surfaceCanvas: #0A1211;
+    --surfaceDefault: #111B19;
+    --surfaceSunken: #0E1817;
+    --textPrimary: #E9F0EE;
+    --textSecondary: #BDCAC6;
+    --textTertiary: #7F908B;
+    --borderSubtle: #23312E;
+    --alertAttention: #D4A93F;
+    --alertAttentionSubtle: #2C2411;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding-block: 3rem 5rem;
+  padding-inline: 1.25rem;
+  background: var(--surfaceCanvas);
+  color: var(--textPrimary);
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  color: var(--textTertiary);
+  font-size: 0.875rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.back:hover { color: var(--brandPrimary); }
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  text-wrap: balance;
+  margin: 2.75rem 0 0.75rem;
+}
+h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 0; }
+h2 { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+h4 { font-size: 0.95rem; font-weight: 600; color: var(--textSecondary); }
+
+p, ul { margin: 0 0 1.1rem; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.45rem; }
+
+.lead { font-size: 1.125rem; color: var(--textSecondary); }
+.fine { font-size: 0.85rem; color: var(--textTertiary); }
+
+strong { font-weight: 600; }
+
+/* Caminho de navegacao, que e o uso normal do italico nestes documentos. */
+em {
+  font-style: normal;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  color: var(--textSecondary);
+}
+
+/* Campo ainda por preencher: a revisao das lojas abre estas paginas, e um campo
+   obrigatorio em branco precisa saltar antes disso. */
+em.todo {
+  font-family: inherit;
+  background: var(--alertAttentionSubtle);
+  color: var(--alertAttention);
+  padding: 0.1em 0.4em;
+  border-radius: 0.25rem;
+}
+
+code {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--surfaceSunken);
+  padding: 0.12em 0.35em;
+  border-radius: 0.25rem;
+}
+
+a { color: var(--brandPrimary); }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--borderSubtle);
+  margin: 2.75rem 0;
+}
+
+.scroll { overflow-x: auto; margin-bottom: 1.5rem; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 34rem;
+  font-size: 0.9rem;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--borderSubtle);
+}
+th {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--textTertiary);
+}
+tbody tr:last-child td { border-bottom: 0; }
+
+.cards { list-style: none; padding: 0; }
+.cards li {
+  background: var(--surfaceDefault);
+  border: 1px solid var(--borderSubtle);
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.cards a { font-weight: 600; text-decoration: none; }
+.cards a:hover { text-decoration: underline; }
+.cards span {
+  display: block;
+  color: var(--textTertiary);
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+}
+
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="../">&larr; Ciclo</a>
+<h1>Termos de uso — Ciclo</h1>
+<p><strong>Última atualização:</strong> 17 de setembro de 2026</p>
+<p>Ao usar o Ciclo você concorda com o que está aqui. Está escrito para ser lido.</p>
+<p><strong>Fornecedor:</strong> <em class="todo">(a preencher: razão social, CNPJ e endereço)</em></p>
+<p><strong>Contato:</strong> <em class="todo">(a preencher: e-mail de suporte)</em></p>
+<hr>
+<h2>1. O que o Ciclo é</h2>
+<p>Um aplicativo para <strong>registrar e organizar</strong> um tratamento com medicamentos GLP-1: aplicações, sintomas, peso, proteína e água — lidos contra o dia do ciclo e a semana no degrau de dose.</p>
+<h2>2. O que o Ciclo <strong>não</strong> é, e isto é o ponto</h2>
+<p>O Ciclo <strong>não indica, não calcula, não sugere e não recomenda dose</strong>. Não interpreta sintoma como diagnóstico. Não recomenda iniciar, aumentar, reduzir, pular ou interromper tratamento. Não substitui consulta, exame ou acompanhamento profissional.</p>
+<p>Não é dispositivo médico nos termos da RDC 657/2022 e 751/2022 da ANVISA, e não tem registro nessa condição — porque <strong>não faz</strong> o que exigiria esse registro.</p>
+<p>Quem decide sobre o seu tratamento é quem acompanha você. O Ciclo organiza o que você registrou para essa conversa acontecer com dado na mesa.</p>
+<p><strong>Emergência:</strong> se você estiver passando mal, procure atendimento. Não use o app como triagem.</p>
+<h2>3. Uso off-label</h2>
+<p>No Brasil, a indicação aprovada de parte destes medicamentos é diabetes tipo 2, e o uso para emagrecer é off-label. O Ciclo <strong>não toma posição</strong>: registra o que foi prescrito, inclusive manipulado, sem validar nem recusar. Julgar afastaria exatamente quem mais precisa de organização.</p>
+<h2>4. Sua conta</h2>
+<ul>
+<li>Idade mínima: 18 anos.</li>
+<li>O acesso é por link enviado ao seu e-mail. Não há senha.</li>
+<li>Você é responsável por manter o acesso ao seu e-mail e por <strong>guardar o código de recuperação</strong>.</li>
+<li><strong>Sobre o código:</strong> os seus registros são cifrados no seu aparelho antes de subir. Nós não temos a chave e não conseguimos recuperá-la. Perdendo o aparelho e o código, os dados não voltam — nem para você, nem para nós. É o preço de o servidor não conseguir ler o que guarda, e está aqui em letra do mesmo tamanho do resto.</li>
+<li>Você pode apagar a conta a qualquer momento em <em>Você → Seus dados → Excluir tudo</em>. Apaga o aparelho e o servidor, e não tem volta.</li>
+</ul>
+<h2>5. Grátis e assinatura</h2>
+<p><strong>Grátis para sempre:</strong> registrar aplicação, sintoma, peso, proteína e água; os lembretes; o histórico inteiro, com a variação de peso em cada degrau de dose; o resumo de uma página para a consulta; o controle de estoque e receita; exportar os seus dados; o backup; e o aviso de quando um sintoma precisa ser visto hoje — <strong>este último nunca será pago</strong>.</p>
+<p><strong>Ciclo Pro</strong> dá acesso a duas leituras, e só a elas:</p>
+<ul>
+<li>a distribuição dos sintomas pelo dia do ciclo, na tela e nas duas linhas correspondentes dentro do resumo da consulta;</li>
+<li>a primeira semana de um degrau de dose lida contra as suas subidas anteriores.</li>
+</ul>
+<p>Nada além disso é pago, e o que está na lista do grátis não volta a ser cobrado.</p>
+<p><strong>Como a assinatura funciona:</strong></p>
+<ul>
+<li><strong>Planos:</strong> mensal e anual. O preço aparece na sua moeda, na tela de compra.</li>
+<li><strong>Teste grátis:</strong> 7 dias no plano anual. A cobrança só acontece se você não cancelar antes do fim do teste.</li>
+<li><strong>Renovação:</strong> automática até você cancelar. A cobrança é feita pela conta da App Store ou da Google Play.</li>
+<li><strong>Cancelar:</strong> nos ajustes de assinatura da loja, até 24 horas antes do fim do período. Cancelar não apaga nada: os seus registros continuam seus, e a exportação continua grátis.</li>
+<li><strong>Reembolso:</strong> pela loja, segundo a política dela. Não processamos pagamento e não temos acesso aos seus dados de cartão.</li>
+<li><strong>Mudança de preço:</strong> avisada no app antes de valer, e nunca aplicada retroativamente ao período já pago.</li>
+</ul>
+<h2>6. Uso aceitável</h2>
+<p>Não use o Ciclo para prestar serviço de saúde a terceiros, não tente extrair dados de outras pessoas, e não tente contornar a assinatura. O app é para o seu próprio tratamento.</p>
+<h2>7. Disponibilidade</h2>
+<p>O app funciona <strong>sem internet</strong>, e essa é a garantia que importa: o registro nunca depende de o nosso servidor estar no ar. O backup depende, e ele pode ficar indisponível para manutenção. Não prometemos disponibilidade ininterrupta do serviço de sincronização.</p>
+<h2>8. Limitação de responsabilidade</h2>
+<p>O Ciclo é fornecido no estado em que se encontra, para organização pessoal. Não nos responsabilizamos por decisões clínicas — elas cabem a você e a quem acompanha o seu tratamento.</p>
+<p>Nada aqui limita direitos que o Código de Defesa do Consumidor garante a você.</p>
+<h2>9. Propriedade intelectual e marcas</h2>
+<p>O aplicativo, o nome Ciclo, o código e o material são nossos.</p>
+<p><strong>Mounjaro®, Zepbound®, Ozempic®, Wegovy®, Saxenda®, Victoza®, Trulicity® e Rybelsus®</strong> são marcas de seus respectivos titulares — Eli Lilly and Company e Novo Nordisk A/S. O Ciclo <strong>não é afiliado, patrocinado nem endossado</strong> por nenhuma delas. Os nomes aparecem apenas para você identificar o que está usando.</p>
+<h2>10. Encerramento</h2>
+<p>Você encerra quando quiser, apagando a conta. Podemos encerrar a sua em caso de uso que viole a seção 6 ou a lei — avisando antes, quando for possível, e sempre permitindo exportar antes.</p>
+<h2>11. Lei aplicável</h2>
+<p>Lei brasileira. Foro do seu domicílio, como assegura o Código de Defesa do Consumidor.</p>
+<h2>12. Mudanças</h2>
+<p>Mudando estes termos, avisamos no app. Continuar usando depois do aviso significa concordar; se não concordar, a exportação e a exclusão continuam disponíveis.</p>
+
+</main>
+</body>
+</html>
