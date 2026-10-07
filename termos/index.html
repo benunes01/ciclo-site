@@ -21,6 +21,7 @@
     --textSecondary: #31403C;
     --textTertiary: #6B7C77;
     --borderSubtle: #D2DBD8;
+    --borderStrong: #BCC8C4;
     --alertAttention: #8E6B0F;
     --alertAttentionSubtle: #F7EFD8;
 }
@@ -36,6 +37,7 @@
     --textSecondary: #BDCAC6;
     --textTertiary: #7F908B;
     --borderSubtle: #23312E;
+    --borderStrong: #31423E;
     --alertAttention: #D4A93F;
     --alertAttentionSubtle: #2C2411;
   }
@@ -116,6 +118,18 @@ code {
 }
 
 a { color: var(--brandPrimary); }
+
+/* Citacao: aparte dentro do texto corrido. Borda e tinta de superficie, sem
+   sombra — a mesma regra de profundidade do app. */
+blockquote {
+  margin: 1.75rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--surfaceSunken);
+  border-left: 3px solid var(--borderStrong);
+  border-radius: 0 0.35rem 0.35rem 0;
+}
+
+blockquote p { margin: 0; color: var(--textSecondary); }
 
 hr {
   border: 0;

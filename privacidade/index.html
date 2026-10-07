@@ -21,6 +21,7 @@
     --textSecondary: #31403C;
     --textTertiary: #6B7C77;
     --borderSubtle: #D2DBD8;
+    --borderStrong: #BCC8C4;
     --alertAttention: #8E6B0F;
     --alertAttentionSubtle: #F7EFD8;
 }
@@ -36,6 +37,7 @@
     --textSecondary: #BDCAC6;
     --textTertiary: #7F908B;
     --borderSubtle: #23312E;
+    --borderStrong: #31423E;
     --alertAttention: #D4A93F;
     --alertAttentionSubtle: #2C2411;
   }
@@ -117,6 +119,18 @@ code {
 
 a { color: var(--brandPrimary); }
 
+/* Citacao: aparte dentro do texto corrido. Borda e tinta de superficie, sem
+   sombra — a mesma regra de profundidade do app. */
+blockquote {
+  margin: 1.75rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--surfaceSunken);
+  border-left: 3px solid var(--borderStrong);
+  border-radius: 0 0.35rem 0.35rem 0;
+}
+
+blockquote p { margin: 0; color: var(--textSecondary); }
+
 hr {
   border: 0;
   border-top: 1px solid var(--borderSubtle);
@@ -176,7 +190,7 @@ tbody tr:last-child td { border-bottom: 0; }
 <p>O app é distribuído pela conta de desenvolvedor de <strong>Bernardo Nunes Pinheiro</strong>, sócio da BECAPTAIN — por isso é esse o nome que aparece como vendedor na App Store. Quem decide o que o app faz com os seus dados é a empresa acima.</p>
 <p><strong>Canal de contato sobre dados pessoais:</strong> <strong>benunes96@gmail.com</strong></p>
 <p>Escrevendo para esse endereço você fala com quem decide o que o app faz com os seus dados — não com um formulário. Respondemos em até 15 dias, como manda o art. 19 da LGPD.</p>
-<p>&gt; <strong>Sobre o encarregado.</strong> A Resolução CD/ANPD nº 2/2022 dispensa o agente de &gt; tratamento de pequeno porte de nomear um encarregado, desde que <strong>publique um &gt; canal de comunicação</strong> com o titular. É o endereço acima. A dispensa não &gt; reduz nenhum dos seus direitos nem nenhuma das obrigações descritas aqui.</p>
+<blockquote><p><strong>Sobre o encarregado.</strong> A Resolução CD/ANPD nº 2/2022 dispensa o agente de tratamento de pequeno porte de nomear um encarregado, desde que <strong>publique um canal de comunicação</strong> com o titular. É o endereço acima. A dispensa não reduz nenhum dos seus direitos nem nenhuma das obrigações descritas aqui.</p></blockquote>
 <hr>
 <h2>1. O princípio</h2>
 <p>Os seus registros de saúde <strong>nascem e vivem no seu celular</strong>. O Ciclo funciona inteiro sem conta, sem internet e sem nos enviar nada.</p>
@@ -283,7 +297,7 @@ tbody tr:last-child td { border-bottom: 0; }
 </tbody></table></div>
 
 <p>Para pedidos que precisem de nós, escreva para <strong>benunes96@gmail.com</strong>. Respondemos em até 15 dias, como manda o art. 19 da LGPD.</p>
-<p>Se a resposta não resolver, você pode reclamar à <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>, em &lt;https://www.gov.br/anpd&gt; — o art. 18, § 1º garante esse caminho, e ele existe mesmo que a gente prefira resolver antes.</p>
+<p>Se a resposta não resolver, você pode reclamar à <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>, em <a href="https://www.gov.br/anpd">https://www.gov.br/anpd</a> — o art. 18, § 1º garante esse caminho, e ele existe mesmo que a gente prefira resolver antes.</p>
 <h2>6. Por quanto tempo guardamos</h2>
 <ul>
 <li><strong>No seu aparelho:</strong> enquanto você quiser.</li>
